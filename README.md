@@ -248,23 +248,9 @@ separates **AI used to build SautiLink** from **AI used inside SautiLink**.
 
 ---
 
-## Competition demo script (≈3 minutes)
 
-1. **Offline moment** — DevTools → Offline. The app still opens; create a report; see
-   *“Waiting for connection.”* Go online → *“Connection restored — synchronising…”* → Case ID issued.
-2. **Anonymous moment** — submit a water report anonymously → **Identity protected** → Case ID +
-   access code, copy/download.
-3. **Trust moment** — open the case: Trust & Evidence panel distinguishes report, evidence,
-   corroboration and official response.
-4. **Institution moment** — sign in as `water@sautilink.demo`, open `CS-82A91-K7X`, see
-   **48 related community reports** and the AI match at 87%; click **Request information**.
-5. **Anonymous reply moment** — back as the citizen (`/track` → `CS-82A91-K7X` / `SAUTI1`), reply
-   *“near the northern entrance.”* The institution sees only “Anonymous reporter”.
-6. **Resolution moment** — institution: **Send official response** → **Mark work in progress** →
-   **Resolve case**. The citizen timeline reaches **RESOLVED**.
-7. **Accountability moment** — `/transparency` shows the aggregate movement with no personal data.
 
-## Competition track alignment
+## Track alignment
 
 * **Transparency & Accountability** — end-to-end case lifecycle, institutional SLAs, public
   accountability dashboard, immutable audit log.
