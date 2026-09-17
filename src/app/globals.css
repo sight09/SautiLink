@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink-900: #0b1f22;
+  --color-ink-700: #234045;
+  --color-ink-500: #5b7278;
+  --color-ink-300: #9fb0b3;
+
+  --color-brand-900: #06322f;
+  --color-brand-800: #0a443f;
+  --color-brand-700: #0e5951;
+  --color-brand-600: #137066;
+  --color-brand-500: #1a8a7c;
+  --color-brand-100: #d9ece8;
+  --color-brand-50: #eef7f5;
+
+  --color-accent-600: #b45a16;
+  --color-accent-500: #e0801f;
+  --color-accent-100: #fdeeda;
+
+  --color-sand-50: #faf8f4;
+  --color-sand-100: #f3efe7;
+  --color-sand-200: #e6e0d4;
+
+  --color-status-info: #1d6fb8;
+  --color-status-warn: #b4700f;
+  --color-status-danger: #b3261e;
+  --color-status-ok: #1a7f52;
+
+  --font-sans: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  background: var(--color-sand-50);
+  color: var(--color-ink-900);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-sans);
+  letter-spacing: 0;
+}
+
+/* Visible, consistent focus for keyboard users */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid var(--color-brand-600);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.sl-card {
+  background: #fff;
+  border: 1px solid var(--color-sand-200);
+  border-radius: 0.625rem;
+  box-shadow: 0 1px 2px rgba(11, 31, 34, 0.04);
+}
+
+.sl-elevated {
+  box-shadow: 0 8px 28px -18px rgba(11, 31, 34, 0.45);
+}
+
+/* Motion: subtle, fast, and fully disabled under prefers-reduced-motion */
+@keyframes sl-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes sl-pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(26, 138, 124, 0.35);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(26, 138, 124, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(26, 138, 124, 0);
+  }
+}
+
+.sl-rise {
+  animation: sl-rise 240ms ease-out both;
+}
+
+.sl-pulse {
+  animation: sl-pulse-ring 1.8s ease-out infinite;
+}
+
+.sl-skeleton {
+  background: #eee9df;
+  background-size: 400% 100%;
+  animation: sl-shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes sl-shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+html[data-lite="on"] img:not([data-keep]) {
+  display: none;
+}
+
+html[data-lite="on"] .sl-rise,
+html[data-lite="on"] .sl-pulse,
+html[data-lite="on"] .sl-skeleton {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.sl-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+}
+
+.sl-skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+  background: var(--color-brand-700);
+  color: white;
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.5rem;
+}

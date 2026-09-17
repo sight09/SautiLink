@@ -1,0 +1,23 @@
+{
+  "name": "SautiLink — Speak safely. Track change.",
+  "short_name": "SautiLink",
+  "description": "Report public-service and safety problems safely, anonymously and offline, then track your case to resolution.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#faf8f4",
+  "theme_color": "#0e5951",
+  "categories": ["government", "social", "utilities"],
+  "lang": "en",
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Report safely", "url": "/report", "description": "Start a new report" },
+    { "name": "Check my case", "url": "/track", "description": "Track a case with your Case ID" },
+    { "name": "Ask SautiLink", "url": "/assistant", "description": "Civic questions and next steps" }
+  ]
+}
