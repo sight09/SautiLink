@@ -1,8 +1,9 @@
-# SautiLink — Speak safely. Track change.
 
 <p align="center">
   <img src="./public/icons/icon.svg" alt="SautiLink logo" width="128" />
 </p>
+
+<h1 align="center">SautiLink - Speak safely. Track change.</h1>
 
 > *Sauti* means **voice** in Swahili.
 > Most reporting platforms stop at **“Submit.”** SautiLink continues all the way to **“Resolved.”**
